@@ -3,6 +3,11 @@
 </div>
 
 <h1 align="center">Masagin｜まさじん</h1>
+<p align="center">
+  <a href="https://twitter.com/masa_tech_0326">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/>
+  </a>
+</p>
 
 <p align="center">
 Ruby on Rails Developer<br>
@@ -69,7 +74,3 @@ Building and operating real-world web applications
 </table>
 
 ---
-
-<p align="center">
-  Focused on building products that solve real-world problems.
-</p>
