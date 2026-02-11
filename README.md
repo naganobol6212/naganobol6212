@@ -37,7 +37,7 @@ Building and operating real-world web applications
 **Solution**  
 まばたきによる Yes / No をもとに、フロー形式で意思確認と履歴共有を実現
 
-- 🌐 App: https://mabatalk.onrender.com  
+- 🌐 App: https://mabatalk.com/
 - 💻 Repo: https://github.com/naganobol6212/mabatalk  
 
 **Features**
