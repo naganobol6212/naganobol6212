@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-Ruby on Rails Developer<br>
-Building and operating real-world web applications
+Ruby on Rails を中心に、フロントエンドも含めたWebアプリケーション開発に取り組んでいます。<br>
+課題解決を起点にプロダクトを設計・実装・デプロイまで一貫して手がけています。
 </p>
 
 ---
@@ -19,9 +19,8 @@ Building and operating real-world web applications
 ## About Me
 
 - Ruby on Rails を中心にWebアプリケーションを個人開発
-- 実際の課題を解決するプロダクト開発を重視
-- MVPリリースから本番環境での運用まで一貫して経験
-- 設計・実装・Docker構築・デプロイ・運用まで対応
+- MVPリリースから本番環境での運用まで一貫して手がける
+- 設計・実装・Docker環境構築・デプロイ・運用まで対応
 - 長期運用を前提に、継続的な改善・機能追加を実施
 
 ---
@@ -37,8 +36,8 @@ Building and operating real-world web applications
 **Solution**  
 まばたきによる Yes / No をもとに、フロー形式で意思確認と履歴共有を実現
 
-- 🌐 App: https://mabatalk.com/
-- 💻 Repo: https://github.com/naganobol6212/mabatalk  
+- 🌐 App: [https://mabatalk.com/](https://mabatalk.com/)
+- 💻 Repo: [https://github.com/naganobol6212/mabatalk](https://github.com/naganobol6212/mabatalk)
 
 **Features**
 - メッセージカテゴリのカスタマイズ
@@ -47,7 +46,14 @@ Building and operating real-world web applications
 - Docker / Render を用いた本番運用
 
 ---
+### Space Logger
+学習記録をGitHubのContribution Graph(草)に自動反映する学習ログアプリ。
+GitHub Tokenをサーバーサイド（Supabase Edge Function）に移管し、ブラウザへのトークン露出を排除。
 
+- 🌐 App: [https://space-logger.vercel.app/](https://space-logger.vercel.app/)
+- 💻 Repo: [https://github.com/naganobol6212/space_logger](https://github.com/naganobol6212/space_logger)
+
+---
 ## Tech Stack
 
 <table align="center">
@@ -58,19 +64,22 @@ Building and operating real-world web applications
 <img src="https://skillicons.dev/icons?i=ruby,rails" />
 
 ### Frontend
-<img src="https://skillicons.dev/icons?i=html,js,css" />
+<img src="https://skillicons.dev/icons?i=html,js,css,react,ts" />
 
 </td>
 <td width="50%" align="center" valign="top">
 
 ### Database
-<img src="https://skillicons.dev/icons?i=postgres" />
+<img src="https://skillicons.dev/icons?i=postgres,supabase" />
 
 ### Tool
-<img src="https://skillicons.dev/icons?i=docker,git,github" />
+<img src="https://skillicons.dev/icons?i=docker,git,github,vercel" />
 
 </td>
 </tr>
 </table>
 
 ---
+
+  ## Contact
+  X: [@masa_tech_0326](https://x.com/masa_tech_0326)
