@@ -30,26 +30,50 @@ Ruby on Rails を中心に、フロントエンドも含めたWebアプリケー
 ### MabaTalk
 発声や身体操作が困難な方のためのコミュニケーション支援Webアプリ
 
+**Background**
+
+妻の義父が脳卒中で倒れ、まばたき以外で意思を伝える手段がなくなった実体験をもとに課題を設定
+
 **Problem**  
 介護現場では意思確認に時間がかかり、家族・スタッフ双方に負担が発生している
 
 **Solution**  
 まばたきによる Yes / No をもとに、フロー形式で意思確認と履歴共有を実現
 
+**Features**
+- フロー形式での段階的な意思確認（カテゴリ → 項目 → Yes/No）
+- カスタムカテゴリ・項目の作成・編集
+- 選択結果のログ保存と月次グラフ表示
+- **Anthropic Claude HaikuによるAIログ要約**（直近30日の傾向をケアに活用）  
+- Docker / Render を用いた本番運用
+
+**URL**
+
 - 🌐 App: [https://mabatalk.com/](https://mabatalk.com/)
 - 💻 Repo: [https://github.com/naganobol6212/mabatalk](https://github.com/naganobol6212/mabatalk)
-
-**Features**
-- メッセージカテゴリのカスタマイズ
-- フロー形式での段階的な意思確認
-- 回答履歴の保存・共有
-- Docker / Render を用いた本番運用
 
 ---
 ### Space Logger
 学習記録をGitHubのContribution Graph(草)に自動反映する学習ログアプリ。
 GitHub Tokenをサーバーサイド（Supabase Edge Function）に移管し、ブラウザへのトークン露出を排除。
 
+**Problem**
+
+学習を継続しても進捗が見えにくく、モチベーション維持が難しい
+
+**Solution**
+
+学習記録と同時に GitHub リポジトリへ自動コミットし、Contribution Graph（草）で継続を可視化
+
+**Features**
+- 学習タイトル・時間・タグ・学習タイプ（input / output）を記録
+- GitHub API連携による自動コミット（記録と同時に草が生える）
+- 週別・タグ別・インプット/アウトプット比率の分析グラフ
+- **GitHub Token を Supabase Edge Function に移管**（ブラウザへのトークン露出を排除）
+-  PKCEフローによるOAuth 認証 / RLSによるデータアクセス制御
+- ダークモード対応
+
+**URL**
 - 🌐 App: [https://space-logger.vercel.app/](https://space-logger.vercel.app/)
 - 💻 Repo: [https://github.com/naganobol6212/space_logger](https://github.com/naganobol6212/space_logger)
 
