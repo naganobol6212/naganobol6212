@@ -28,7 +28,12 @@ Ruby on Rails を中心に、フロントエンドも含めたWebアプリケー
 ## Main Project
 
 ### MabaTalk
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/99e0d087-32cf-4afe-8732-b44878384cc2" width="80%" />
+</p>
 発声や身体操作が困難な方のためのコミュニケーション支援Webアプリ
+
+開発背景note記事：["伝えたいのに伝えられない"を減らしたい。未完成のまま「MabaTalk」を公開しました。](https://note.com/prime_snail5740/n/n02d9f797d46a)
 
 **Background**
 
@@ -54,6 +59,9 @@ Ruby on Rails を中心に、フロントエンドも含めたWebアプリケー
 
 ---
 ### Space Logger
+<p align="center">
+  <img src="https://i.gyazo.com/3d6c291c36d94ce96a9ccf17f1799b84.png" width="80%" />
+</p>
 学習記録をGitHubのContribution Graph(草)に自動反映する学習ログアプリ。
 GitHub Tokenをサーバーサイド（Supabase Edge Function）に移管し、ブラウザへのトークン露出を排除。
 
