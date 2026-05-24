@@ -1,4 +1,5 @@
 import { CityScene } from "@/components/CityScene";
+import { FileDetailPanel } from "@/components/FileDetailPanel";
 import { loadCodebase } from "@/lib/codebase";
 
 export default async function Home() {
@@ -11,8 +12,12 @@ export default async function Home() {
         <div className="text-slate-300">
           {codebase.files.length} files · {codebase.edges.length} edges
         </div>
+        <div className="mt-1 text-[11px] text-slate-400">
+          click a building · scroll to zoom · drag to rotate
+        </div>
       </div>
       <CityScene codebase={codebase} />
+      <FileDetailPanel codebase={codebase} />
     </div>
   );
 }
