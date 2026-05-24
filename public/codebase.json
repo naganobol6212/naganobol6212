@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "id": "src/app/layout.tsx",
+      "path": "src/app/layout.tsx",
+      "loc": 34,
+      "functions": 1,
+      "imports": [
+        "next",
+        "next/font/google",
+        "./globals.css"
+      ]
+    },
+    {
+      "id": "src/app/page.tsx",
+      "path": "src/app/page.tsx",
+      "loc": 66,
+      "functions": 1,
+      "imports": [
+        "next/image"
+      ]
+    }
+  ],
+  "edges": [],
+  "generatedAt": "2026-05-24T03:52:43.701Z"
+}
