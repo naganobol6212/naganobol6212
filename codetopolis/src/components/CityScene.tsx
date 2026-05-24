@@ -4,7 +4,10 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Grid } from "@react-three/drei";
 import { useMemo } from "react";
 import type { Codebase } from "@/lib/types";
+import { layoutFiles } from "@/lib/layout";
+import { useSelectionStore } from "@/lib/store";
 import { Building } from "./Building";
+import { DependencyLines } from "./DependencyLines";
 
 type Props = {
   codebase: Codebase;
@@ -12,25 +15,11 @@ type Props = {
 
 const GRID_SPACING = 4;
 
-function gridPosition(
-  index: number,
-  total: number,
-  spacing: number,
-): [number, number, number] {
-  const cols = Math.ceil(Math.sqrt(total));
-  const row = Math.floor(index / cols);
-  const col = index % cols;
-  const offset = ((cols - 1) * spacing) / 2;
-  return [col * spacing - offset, 0, row * spacing - offset];
-}
-
 export function CityScene({ codebase }: Props) {
+  const setSelected = useSelectionStore((s) => s.setSelected);
+
   const positioned = useMemo(
-    () =>
-      codebase.files.map((file, i) => ({
-        file,
-        position: gridPosition(i, codebase.files.length, GRID_SPACING),
-      })),
+    () => layoutFiles(codebase.files, GRID_SPACING),
     [codebase.files],
   );
 
@@ -39,6 +28,7 @@ export function CityScene({ codebase }: Props) {
       shadows
       camera={{ position: [15, 15, 15], fov: 50 }}
       style={{ width: "100%", height: "100%", background: "#0f172a" }}
+      onPointerMissed={() => setSelected(null)}
     >
       <ambientLight intensity={0.5} />
       <directionalLight
@@ -62,9 +52,16 @@ export function CityScene({ codebase }: Props) {
         infiniteGrid
       />
 
-      {positioned.map(({ file, position }) => (
-        <Building key={file.id} file={file} position={position} />
+      {positioned.map(({ file, position, dims }) => (
+        <Building
+          key={file.id}
+          file={file}
+          position={position}
+          dims={dims}
+        />
       ))}
+
+      <DependencyLines edges={codebase.edges} positioned={positioned} />
 
       <OrbitControls makeDefault enableDamping />
     </Canvas>
