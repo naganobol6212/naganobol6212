@@ -14,13 +14,64 @@
     {
       "id": "src/app/page.tsx",
       "path": "src/app/page.tsx",
-      "loc": 66,
+      "loc": 19,
       "functions": 1,
       "imports": [
-        "next/image"
+        "@/components/CityScene",
+        "@/lib/codebase"
       ]
+    },
+    {
+      "id": "src/components/Building.tsx",
+      "path": "src/components/Building.tsx",
+      "loc": 35,
+      "functions": 5,
+      "imports": [
+        "react",
+        "@/lib/types"
+      ]
+    },
+    {
+      "id": "src/components/CityScene.tsx",
+      "path": "src/components/CityScene.tsx",
+      "loc": 73,
+      "functions": 5,
+      "imports": [
+        "@react-three/fiber",
+        "@react-three/drei",
+        "react",
+        "@/lib/types",
+        "./Building"
+      ]
+    },
+    {
+      "id": "src/lib/codebase.ts",
+      "path": "src/lib/codebase.ts",
+      "loc": 10,
+      "functions": 1,
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "./types"
+      ]
+    },
+    {
+      "id": "src/lib/types.ts",
+      "path": "src/lib/types.ts",
+      "loc": 19,
+      "functions": 0,
+      "imports": []
     }
   ],
-  "edges": [],
-  "generatedAt": "2026-05-24T03:52:43.701Z"
+  "edges": [
+    {
+      "from": "src/components/CityScene.tsx",
+      "to": "src/components/Building.tsx"
+    },
+    {
+      "from": "src/lib/codebase.ts",
+      "to": "src/lib/types.ts"
+    }
+  ],
+  "generatedAt": "2026-05-24T04:08:35.612Z"
 }
