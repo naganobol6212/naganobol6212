@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/analyze.ts",
     "build": "next build",
     "start": "next start",
     "analyze": "tsx scripts/analyze.ts"
